@@ -1,0 +1,23 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>迁徙数据可视化</title>
+    {{ macro.render_chart_dependencies(chart) }}
+</head>
+<body>
+<h2 style="text-align: center; color:#42638e">疫情可视化分析</h2>
+<div class="search_bar clearfix">
+
+		<form action="/move" method="get">
+			<input type="text" class="input_text fl" name="searchtext" placeholder="20200210">
+			<input type="submit" class="input_btn fr" name="" value="搜索">
+		</form>
+		</div>
+<h3 style="text-align: center; color:#42638e"><a href="http://127.0.0.1:8000/">整体数据 &nbsp &nbsp </a><a href="http://127.0.0.1:8000/move/">迁徙数据 </a></h3>
+    {{ macro.render_chart_content(chart) }}
+
+
+</body>
+</html>
